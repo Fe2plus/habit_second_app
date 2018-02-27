@@ -1,6 +1,14 @@
 <div class="row">
   <div class="col-md-3 col-12 d-none d-md-block">
-    <div class="card p-2"
-    <%= image_tag current_user.image_url, class: "card-img-top rounded-circle" %>
+    <div class="card p-2">
+      <%= image_tag current_user.image_url, class: "img-circle", width: 100 %>
+    </div>
   </div>
+</div>
+<div>
+  <%= form_for(@post) do |f| %>
+  <%= f.label :habit, "癖" %>
+  <%= f.text_area :habit %>
+  <%= f.submit "つぶやく"%>
+  <% end %>
 </div>
