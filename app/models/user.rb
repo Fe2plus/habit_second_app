@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :posts, inverse_of: :user
 
   def self.find_or_create_from_auth(auth)
     provider = auth[:provider]
