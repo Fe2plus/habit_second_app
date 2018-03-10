@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180221093334) do
+ActiveRecord::Schema.define(version: 20180310065446) do
 
   create_table "posts", force: :cascade do |t|
     t.integer  "user_id"
@@ -26,8 +26,10 @@ ActiveRecord::Schema.define(version: 20180221093334) do
     t.string   "uid"
     t.string   "nickname"
     t.string   "image_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "twitter_token"
+    t.string   "twitter_secret"
   end
 
 end
