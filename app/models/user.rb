@@ -8,7 +8,6 @@ class User < ActiveRecord::Base
     image_url = auth[:info][:image]
     twitter_token = auth.credentials.token
     twitter_secret = auth.credentials.secret
-    logger.debug("aaaaa"+twitter_token)
 
     self.find_or_create_by(provider: provider, uid: uid) do |user|
       user.nickname = nickname
