@@ -17,5 +17,3 @@ class User < ActiveRecord::Base
     end
   end
 end
-
-##twitter_tokenの暗号化？gemとデザインの検討
