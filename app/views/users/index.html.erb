@@ -1,21 +1,22 @@
-<div class="row">
-  <div class="col-md-3 col-12 d-none d-md-block">
-    <div class="">
-      <% if logged_in? %>
-      <%= image_tag current_user.image_url, class: "img-circle", width: 100 %>
-      <% end %>
-    </div>
+<div class="row" >
+  <div class="col" >
+    <% if logged_in? %>
+    <%= image_tag current_user.image_url, class: "img-circle", width: 100 %>
+    <% end %>
   </div>
 </div>
-<div class="row">
-  <div class="">
+
+<div class="row" style="margin-top:20px;">
+  <div class="col">
     <% if logged_in? %>
     <%= form_for(@post) do |f| %>
     <%= f.label :habit, "癖" %>
     <%= f.text_area :habit %>
     <%= f.label :friend, "奢ってもらう友人" %>
     <%= f.text_area :friend %>
-    <%= f.submit "つぶやく"%>
+    <div class="col" style="margin-top:50px;">
+      <%= f.submit "つぶやく" ,class:"btn btn-lg btn-secondary col-sm-3"%>
+    </div>
     <% end %>
     <% end %>
   </div>
