@@ -8,10 +8,7 @@ end
 gem "omniauth"
 gem "omniauth-twitter"
 gem "twitter"
-gem "bootstrap"
-gem "jquery-rails"
-gem "bootstrap-sass",'~> 3.3.6'
-gem 'autoprefixer-rails'
+gem 'bootstrap', '~> 4.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.6'
