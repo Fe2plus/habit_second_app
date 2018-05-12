@@ -12,7 +12,7 @@ class PostsController < ApplicationController
         config.access_token_secret  = @current_user.twitter_secret
       end
       # Twitter投稿
-      client.update("@"+@post.friend+"　とてもとても"+@post.habit)
+      client.update("@"+@post.friend+@post.habit)
       redirect_to root_path, notice: 'ツイートしました！'
     else
       render root_path
