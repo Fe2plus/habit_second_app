@@ -19,18 +19,17 @@
       <% else %>
       <span class="btn btn-outline-primary" style="margin-top:25px;"><%= link_to 'Twitterでログイン', '/auth/twitter' %></span>
       <% end %>
-
-      <% if flash[:notice] %>
-      <div class="alert alert-success">
-        <%= flash[:notice] %>
-      </div>
-      <% end %>
     </div>
 
     <main role="main" class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center container ">
+      <% if flash[:notice] %>
+      <div class="alert alert-success col-md-4 offset-md-4">
+        <%= flash[:notice] %>
+      </div>
+      <% end %>
       <h2 class="display-4" style="font-size: 25px;">直したい癖を書いてください</h2>
       <p class="lead" style="font-size: 18px; margin-top:25px;">例：タバコをやめたい。晩酌をやめたい。女遊びをやめたい。なんでも....</p>
-      <div class="mb-3 text-cente" style="margin-top:50px;">
+      <div class="mb-3 text-center" style="margin-top:50px;">
         <%= yield %>
       </div>
     </main>
