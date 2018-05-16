@@ -1,2 +1,11 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap";
+
+header{
+  background: #F5F5F5;
+}
+//適用されない....なぜ？
+
+body {
+  background-image: url(sun-pattern.png);
+}

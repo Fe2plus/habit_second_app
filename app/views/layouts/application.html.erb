@@ -11,7 +11,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <header>
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
       <h1 class="my-0 mr-md-auto font-weight-normal" style="font-size: 30px;">癖直し煽りマシーン</h1>
       <% if logged_in? %>
@@ -20,15 +20,19 @@
       <span class="btn btn-outline-primary" style="margin-top:25px;"><%= link_to 'Twitterでログイン', '/auth/twitter' %></span>
       <% end %>
     </div>
+  </header>
 
+  <body>
     <main role="main" class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center container ">
       <% if flash[:notice] %>
       <div class="alert alert-success col-md-4 offset-md-4">
         <%= flash[:notice] %>
       </div>
       <% end %>
-      <h2 class="display-4" style="font-size: 25px;">直したい癖を書いてください</h2>
-      <p class="lead" style="font-size: 18px; margin-top:25px;">例：タバコをやめたい。晩酌をやめたい。女遊びをやめたい。なんでも....</p>
+      <h2 class="display-4" style="font-size: 25px;">自分の悪い癖を直しましょう！</h2>
+      <p class="lead" style="font-size: 18px; margin-top:25px;">このアプリは自分の悪い癖を宣言(ツイート)します！</p>
+      <p>１週間後、やめることができたら、友達にご飯を奢ってくれます！</p>
+      <p>例：禁煙します！、宿題忘れません！その他なんでも....</p>
       <div class="mb-3 text-center" style="margin-top:50px;">
         <%= yield %>
       </div>
