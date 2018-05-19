@@ -13,7 +13,7 @@
 
   <header>
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-      <h1 class="my-0 mr-md-auto font-weight-normal" style="font-size: 30px;">癖直し煽りマシーン</h1>
+      <h1 class="my-0 mr-md-auto font-weight-normal logo-font" style="font-size: 30px;">癖直しマシーン</h1>
       <% if logged_in? %>
       <span class="btn btn-outline-primary" style="margin-top:25px;"><%= link_to 'ログアウト', logout_path %></span>
       <% else %>
@@ -30,8 +30,8 @@
       </div>
       <% end %>
       <h2 class="display-4" style="font-size: 25px;">自分の悪い癖を直しましょう！</h2>
-      <p class="lead" style="font-size: 18px; margin-top:25px;">このアプリは自分の悪い癖を宣言(ツイート)します！</p>
-      <p>１週間後、やめることができたら、友達にご飯を奢ってくれます！</p>
+      <p class="lead" style="font-size: 18px; margin-top:25px;">自分の悪い癖を直すと宣言(ツイート)します！</p>
+      <p>一定期間後、癖が直れば、友達がご飯を奢ってくれます！(恐らく)</p>
       <p>例：禁煙します！、宿題忘れません！その他なんでも....</p>
       <div class="mb-3 text-center" style="margin-top:50px;">
         <%= yield %>
