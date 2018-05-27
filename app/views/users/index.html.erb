@@ -8,6 +8,7 @@
   <div class="col-md-4 offset-md-4">
     <% if logged_in? %>
     <%= form_for(@post) do |f| %>
+    <%= render 'shared/error_messages' %>
     <div class="form-group">
       <%= f.label :habit, "悪い癖だな〜と日々感じること",class:"col-form-label col-form-label-lg" %>
       <%= f.text_area :habit , :placeholder => "つい喫煙してしまう、宿題を忘れてしまう...etc",

@@ -15,7 +15,7 @@ class PostsController < ApplicationController
       client.update("@"+@post.friend+@post.habit)
       redirect_to root_path, notice: 'ツイートしました！'
     else
-      render root_path
+      render "users/index"
     end
   end
 
